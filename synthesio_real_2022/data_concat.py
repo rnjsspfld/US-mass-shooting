@@ -1,4 +1,4 @@
-# # speed-up concat processing
+# 1. speed-up concat processing
 # import os
 # import pandas as pd
 # from concurrent.futures import ThreadPoolExecutor
@@ -39,11 +39,10 @@
 # print(concatenated_df.shape)
 #
 # # save the file
-# concatenated_df.to_csv("synthesio_2022_jan_may.csv")
+# concatenated_df.to_csv("your_file_name.csv")
 
-import pandas as pd
-
-file_path = '/Users/hyerinkwon/Desktop/Research Group/SMAD_mass_shooting/SMAD_MS/synthesio_real_2022/synthesio_2022_jan_may.csv'
+# 2. import csv file and save it as parquet file due to the memory issue
+file_path = ''
 
 chunk_size = 150000
 
@@ -57,5 +56,4 @@ df = pd.concat(chunks, ignore_index=True)
 
 print(df)
 
-# df.to_pickle('synthesio_2022_jan_may.pkl')
-df.to_parquet('synthesio_2022_jan_may.parquet')
+df.to_parquet('your_file_name.parquet')
