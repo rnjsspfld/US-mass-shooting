@@ -1,3 +1,6 @@
+### This script is authored by Hyerin Kwon
+### When sharing, please ensure proper attribution to the original author.
+
 # 1. speed-up concat processing
 # import os
 # import pandas as pd
